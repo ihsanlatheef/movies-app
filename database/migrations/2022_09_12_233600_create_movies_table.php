@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('rating', 2, 1);
+            $table->float('rating', 3, 1);
             $table->string('lead_actor');
             $table->string('director');
             $table->string('genre');
