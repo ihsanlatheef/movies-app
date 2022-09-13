@@ -44,7 +44,7 @@ class MovieController extends Controller
             'genre' => 'required'
         ]);
       
-        Product::create($request->all());
+        Movie::create($request->all());
        
         return redirect()->route('movies.index')
                         ->with('success','Movie created successfully.');
@@ -81,17 +81,7 @@ class MovieController extends Controller
      */
     public function update(Request $request, Movie $movie)
     {
-        $request->validate([
-            'name' => 'required',
-            'lead_actor' => 'required',
-            'rating' => 'required',
-            'genre' => 'required'
-        ]);
-      
-        $movie->update($request->all());
-      
-        return redirect()->route('movies.index')
-                        ->with('success','Movie updated successfully');
+        //
     }
 
     /**
